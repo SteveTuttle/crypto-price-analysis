@@ -92,7 +92,7 @@ starter_code
 * Crypto_Clustering_starter_code.ipynb
 
 Resources
-crypto_market_data.csv
+* crypto_market_data.csv
 
 
  
