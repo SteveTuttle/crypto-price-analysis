@@ -5,19 +5,19 @@ UNC_data_bootcamp_module_19
 ### Background
 For this challenge, we need to use our knowledge of Python via a Jupyter Notebook and Unsupervised Learning to predict if cryptocurrencies are affected by 24-hour or 7-day price changes.
 
-
-
 ## Deliverables
-Our goal for this challenge is multi-part. We will need to find the best k value using a Scaled DataFrame created from the source CSV file. (Add rest later)
-
+Our goal for this challenge is detailed a requires us to follow a series of steps broken down within six greater sections. The Challenge Instuctions are outlined within each section, and the section are to be completed as follows:
+1) Prepare the Data
+2) Find the Best Value for _k_ Using the Original Scaled DataFrame
+3) Cluster Cryptocurrencies with K-means Using the Original Scaled Data
+4) Optimize Clusters with Principal Component Analysis
+5) Find the Best Value for _k_ Using the PCA Data
+6) Cluster Cryptocurrencies with K-means Using the PCA Data
 
 ### Section-1: Prepare the Data
 To start off I needed to rename the __Crypto_Clustering_starter_code.ipynb__ file as __Crypto_Clustering_SDT.ipynb__. I viewed the file _crypto_market_data.csv_ separately first to understand the data scource better, then I loaded the _crypto_market_data.csv_ into a DataFrame. From here I am able to acquire the metrics and plot the data needed complete the challenge per the instructions:
 * Use the _StandardScaler()_ module from _scikit-learn_ to normalize the data from the CSV file.
 * Create a DataFrame with the scaled data and set the __"coin_id"__ index from the original DataFrame as the index for the new DataFrame.
-
-![First DataFrame] placeholder???
-
 
 ### Section-2: Find the Best Value for k Using the Original Scaled DataFrame
 In this section I will use the elbow method to find the best value for _k_ per the instructions from the challenge:
@@ -28,6 +28,7 @@ In this section I will use the elbow method to find the best value for _k_ per t
 * Plot a line chart with all the inertia values computed with the different values of _k_ to visually identify the optimal value for _k_.
 * Answer the following question in your notebook: What is the best value for _k_?
 
+![DF Elbow Plot](https://github.com/SteveTuttle/CryptoClustering/blob/main/Images/df_elbow.png)
 
 ### Section-3: Cluster Cryptocurrencies with K-means Using the Original Scaled Data
 For this section I will use the following steps per the challenge instructions to cluster the cryptocurrencies for the best value for _k_ of the original scaled data:
@@ -40,8 +41,7 @@ For this section I will use the following steps per the challenge instructions t
   * Color the graph points with the labels found using K-means.
   * Add the __"coin_id"__ column in the _hover_cols_ parameter to identify the cryptocurrency represented by each data point.
 
-
-
+![Market Cluster](https://github.com/SteveTuttle/CryptoClustering/blob/main/Images/market_cluster.png)
 
 ### Section-4: Optimize Clusters with Principal Component Analysis
 In this section I will further refine the clusters using Principal Component Analysis (__PCA__) per the challenge instructions:
@@ -49,11 +49,6 @@ In this section I will further refine the clusters using Principal Component Ana
 * Retrieve the explained variance to determine how much information can be attributed to each principal component and then answer the following question in your notebook:
   * _What is the total explained variance of the three principal components_?
 * Create a new DataFrame with the PCA data and set the __"coin_id"__ index from the original DataFrame as the index for the new DataFrame.
-
-![PCA DataFrame] placeholder
-
-
-
 
 ### Section-5: Find the Best Value for k Using the PCA Data
 Following challenge instructions I will again use the elbow method on the PCA data to find the best value for _k_ by:
@@ -66,7 +61,7 @@ Following challenge instructions I will again use the elbow method on the PCA da
   * What is the best value for _k_ when using the PCA data?
   * Does it differ from the best k value found using the original data?
 
-
+![PCA Elbow Plot](https://github.com/SteveTuttle/CryptoClustering/blob/main/Images/pca_elbow_plot.png)
 
 ### Section-6: Cluster Cryptocurrencies with K-means Using the PCA Data
 Finally, I will complete the following steps per the challenge instructions to cluster the cryptocurrencies for the best value for _k_ on the PCA data:
@@ -81,22 +76,20 @@ Finally, I will complete the following steps per the challenge instructions to c
 * Answer the following question:
   * What is the impact of using fewer features to cluster the data using K-Means?
 
-
-
+![Market Segment](https://github.com/SteveTuttle/CryptoClustering/blob/main/Images/market_segment.png)
 
 ## Resources
 ### Bootcamp References --- Update for this Challenge!!
 Module 19 Instructions
- 
+
 starter_code
 * Crypto_Clustering_starter_code.ipynb
 
 Resources
 * crypto_market_data.csv
 
-
- 
 ***Special Thanks:***
+_(for Challenge overview discussions during BootCamp office hours)_
 * Jamie Miller
 * Mounika Mamindla
 * Lisa Shemanciik
@@ -104,9 +97,11 @@ Resources
 ### External References
 _(where possible will provide link to website)_
 * [pandas documentation](https://pandas.pydata.org/docs/reference/general_functions.html)
-* [matplotlib documentation](https://matplotlib.org/stable/index.html)
 * [hvplot documentation](https://hvplot.holoviz.org/reference/geopandas/points.html)
-* [scipy.stats documentation](https://docs.scipy.org/doc/scipy/reference/stats.html)
+* [scikit-learn documenation](https://scikit-learn.org/stable/modules/clustering.html#clustering)
+* YouTube _(various videos)_
+* Google
+* GitHub
 
 
 
