@@ -1,4 +1,4 @@
-# CryptoClustering
+# crypto-price-analysis
 UNC_data_bootcamp_module_19
 
 ## Challenge Description
